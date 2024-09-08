@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 
-public class BTLevelOrderTraversal {
+class BTLevelOrderTraversal {
 
 
     public static class TreeNode {

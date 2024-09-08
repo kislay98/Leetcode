@@ -3,7 +3,7 @@ package org.kislay.DiameterOfBinaryTree;
 import java.util.HashMap;
 import java.util.Map;
 
-public class DiameterOfBinaryTree {
+class DiameterOfBinaryTree {
     static class TreeNode {
         int val;
         TreeNode left;

@@ -1,6 +1,6 @@
 package org.kislay.MergeLinkedLists;
 
-public class MergeLinkedLists {
+class MergeLinkedLists {
 
     public static class ListNode {
       int val;

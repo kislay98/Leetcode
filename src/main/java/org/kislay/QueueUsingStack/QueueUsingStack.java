@@ -2,7 +2,7 @@ package org.kislay.QueueUsingStack;
 
 import java.util.Stack;
 
-public class QueueUsingStack {
+class QueueUsingStack {
 
     static class MyQueue {
 

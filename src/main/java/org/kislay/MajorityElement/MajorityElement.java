@@ -3,7 +3,7 @@ package org.kislay.MajorityElement;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MajorityElement {
+class MajorityElement {
 
     public int majorityElement(int[] nums) {
         int threshold = nums.length/2;

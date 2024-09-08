@@ -3,7 +3,7 @@ package org.kislay.ValidAnagrams;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ValidAnagrams {
+class ValidAnagrams {
 
     public boolean isAnagram(String s, String t) {
         /* Method 1:

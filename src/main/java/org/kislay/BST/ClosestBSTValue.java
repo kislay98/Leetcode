@@ -1,4 +1,4 @@
-package org.kislay.Program;
+package org.kislay.BST;
 class ClosestBSTValue {
     public static int findClosestValueInBst(BST tree, int target) {
         // Write your code here.

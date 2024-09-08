@@ -1,9 +1,8 @@
 package org.kislay.LongestIncreasingSubsequence;
 
 import java.util.Arrays;
-import java.util.OptionalInt;
 
-public class LongestIncreasingSubsequence {
+class LongestIncreasingSubsequence {
 
     public int lengthOfLIS(int[] nums) {
         if (nums == null || nums.length == 0) {

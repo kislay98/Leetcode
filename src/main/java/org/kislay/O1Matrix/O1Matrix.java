@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.Queue;
 
-public class O1Matrix {
+class O1Matrix {
 
     public int[][] updateMatrix(int[][] mat) {
         int m = mat.length;

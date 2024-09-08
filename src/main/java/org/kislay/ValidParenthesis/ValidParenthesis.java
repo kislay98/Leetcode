@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Stack;
 
-public class ValidParenthesis {
+class ValidParenthesis {
 
     public boolean isValid(String s) {
         boolean valid = true;

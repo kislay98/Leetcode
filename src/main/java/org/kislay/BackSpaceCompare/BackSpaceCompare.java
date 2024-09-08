@@ -2,7 +2,7 @@ package org.kislay.BackSpaceCompare;
 
 import java.util.Stack;
 
-public class BackSpaceCompare {
+class BackSpaceCompare {
 
     public boolean backspaceCompare(String s, String t) {
         Stack<Character> stackS = constructStack(s);

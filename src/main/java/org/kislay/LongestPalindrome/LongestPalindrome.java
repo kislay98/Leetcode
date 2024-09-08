@@ -3,7 +3,7 @@ package org.kislay.LongestPalindrome;
 import java.util.HashMap;
 import java.util.Map;
 
-public class LongestPalindrome {
+class LongestPalindrome {
 
     public int longestPalindrome(String s) {
         Map<Character, Integer> freqMap = getFreqMap(s);

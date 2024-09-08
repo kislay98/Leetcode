@@ -2,7 +2,7 @@ package org.kislay.RomanToInt;
 
 import java.util.Map;
 
-public class RomanToInt {
+class RomanToInt {
 
     Map<String, Integer> romanCombinationSingle = Map.of("I", 1,
             "V", 5,

@@ -1,6 +1,6 @@
 package org.kislay.CountingBits;
 
-public class CountingBits {
+class CountingBits {
 
     public int[] countBits(int n) {
         int[] result = new int[n + 1];

@@ -3,7 +3,7 @@ package org.kislay.LongestSubstringWithoutRepeating;
 import java.util.HashMap;
 import java.util.Map;
 
-public class LongestSubstringWithoutRepeating {
+class LongestSubstringWithoutRepeating {
 
     public int lengthOfLongestSubstring(String s) {
         if (s == null || s.isEmpty()) {

@@ -1,8 +1,8 @@
 package org.kislay.MiddleOfLinkedList;
 
-public class MiddleOfLinkedList {
+class MiddleOfLinkedList {
 
-      public class ListNode {
+      class ListNode {
           int val;
           ListNode next;
           ListNode() {}

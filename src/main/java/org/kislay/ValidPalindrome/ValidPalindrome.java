@@ -1,6 +1,6 @@
 package org.kislay.ValidPalindrome;
 
-public class ValidPalindrome {
+class ValidPalindrome {
 
     public boolean isPalindrome(String s) {
         s = s.toLowerCase();

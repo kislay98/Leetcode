@@ -1,6 +1,6 @@
 package org.kislay.LongestCommonSubsequence;
 
-public class LongestCommonSubsequence {
+class LongestCommonSubsequence {
 
     public int longestCommonSubsequence(String text1, String text2) {
 

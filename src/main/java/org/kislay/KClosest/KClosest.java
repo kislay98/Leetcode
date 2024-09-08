@@ -3,7 +3,7 @@ package org.kislay.KClosest;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-public class KClosest {
+class KClosest {
 
     public int[][] kClosest(int[][] points, int k) {
         if (points == null || points.length == 0) {

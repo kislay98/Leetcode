@@ -1,6 +1,6 @@
 package org.kislay.Knapsack;
 
-public class Knapsack {
+class Knapsack {
 
     int knapSack(int W, int[] wt, int[] val) {
         int n = wt.length;

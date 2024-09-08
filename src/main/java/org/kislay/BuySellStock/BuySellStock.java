@@ -1,6 +1,6 @@
 package org.kislay.BuySellStock;
 
-public class BuySellStock {
+class BuySellStock {
     public int maxProfit(int[] prices) {
         int n = prices.length;
         int maxValueInFuture = 0;

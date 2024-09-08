@@ -1,76 +1,68 @@
 package org.kislay.InsertIntervals;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
-public class InsertIntervals {
+class InsertIntervals {
 
     public int[][] insert(int[][] intervals, int[] newInterval) {
-        if (intervals == null || intervals.length == 0) {
-            return new int[][] { newInterval };
+        int toAddIntervalStartPoint = newInterval[0];
+        int toAddIntervalEndPoint = newInterval[1];
+        int intervalsLength = intervals.length;
+        if (intervalsLength == 0) {
+            return new int[][]{{newInterval[0], newInterval[1]}};
         }
+        int[][] newIntervals = new int[intervalsLength+1][2];
+        int currIntervalIdx = 0;
+        int newIntervalIdx = 0;
 
-        if (intervals.length == 1) {
-            int start = newInterval[0];
-            int end = newInterval[1];
-            int givingEnd = intervals[0][1];
-            int givingStart = intervals[0][0];
-            if (start <= intervals[0][0] && start >= intervals[0][1]) {
-                givingEnd = Math.max(newInterval[1], intervals[0][1]);
-            }
-            if (end <= intervals[0][0] && end >= intervals[0][1]) {
-                givingStart = Math.min(newInterval[0], intervals[0][0]);
-            }
-            int[] ints = {givingStart, givingEnd};
-            return new int[][] { ints };
-        }
 
-        int currPos = 0;
-        List<int[]> newIntervals = new ArrayList<>();
-        while (currPos < intervals.length) {
-            int[] currInterval = intervals[currPos];
-            if (currInterval[1] < newInterval[0]) {
-                newIntervals.add(currInterval);
-            } else {
-                break;
-            }
-            currPos++;
-        }
-        int newIntervalStart = Math.min(newInterval[0], intervals[currPos][0]);
-        int newIntervalEnd = newInterval[1];
-
-        while (currPos < intervals.length) {
-            int[] currInterval = intervals[currPos];
-            if (currInterval[0] < newInterval[1]) {
-                currPos++;
-                // do nothing
-            } else if (currInterval[0] == newInterval[1]) {
-                newIntervalEnd = currInterval[1];
-                currPos++;
-                break;
-            } else {
+        while (intervals[currIntervalIdx][1] < toAddIntervalStartPoint) {
+            newIntervals[newIntervalIdx++] = intervals[currIntervalIdx];
+            currIntervalIdx++;
+            if (currIntervalIdx == intervalsLength) {
                 break;
             }
         }
-        newIntervals.add(new int[] { newIntervalStart, newIntervalEnd });
-        while (currPos < intervals.length) {
-            int[] currInterval = intervals[currPos];
-            newIntervals.add(currInterval);
-            currPos++;
+
+        int newIntervalStartPoint;
+        if (currIntervalIdx == intervalsLength) {
+            newIntervalStartPoint = toAddIntervalStartPoint;
+        } else newIntervalStartPoint = Math.min(intervals[currIntervalIdx][0], toAddIntervalStartPoint);
+
+        int newIntervalEndPoint;
+        while (currIntervalIdx < intervalsLength && intervals[currIntervalIdx][1] <= toAddIntervalEndPoint) {
+            currIntervalIdx++;
+            if (currIntervalIdx == intervalsLength) {
+                break;
+            }
         }
-        return newIntervals.toArray(new int[newIntervals.size()][]);
+        if (currIntervalIdx == intervalsLength) {
+            newIntervalEndPoint = toAddIntervalEndPoint;
+        } else if (intervals[currIntervalIdx][0] <= toAddIntervalEndPoint) {
+            newIntervalEndPoint = intervals[currIntervalIdx][1];
+            currIntervalIdx++;
+        } else {
+            newIntervalEndPoint = toAddIntervalEndPoint;
+        }
+
+        newIntervals[newIntervalIdx++] = new int[] {newIntervalStartPoint, newIntervalEndPoint};
+        while (currIntervalIdx < intervalsLength) {
+            newIntervals[newIntervalIdx++] = intervals[currIntervalIdx];
+            currIntervalIdx++;
+        }
+
+        return Arrays.copyOf(newIntervals, newIntervalIdx);
     }
 
     public static void main(String[] args) {
         InsertIntervals intervals = new InsertIntervals();
         int[][] intervals1 = {
-                {1, 2},
-                {3, 5},
-                {6, 7},
-                {8, 10},
-                {12, 16}
+                {1, 5}
         };
-        int[] intervals2 = {4, 8};
+        int[] intervals2 = {6, 8};
         intervals.insert(intervals1, intervals2);
     }
 

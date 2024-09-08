@@ -1,6 +1,6 @@
 package org.kislay.LowestCommonAncestor;
 
-public class LowestCommonAncestor {
+class LowestCommonAncestor {
 
     public static class TreeNode {
         int val;

@@ -1,9 +1,9 @@
 package org.kislay.HeightBalancedBinaryTree;
 
 
-public class HeightBalancedBinaryTree {
+class HeightBalancedBinaryTree {
 
-    public class TreeNode {
+    class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;

@@ -1,6 +1,6 @@
 package org.kislay.ClimbStairs;
 
-public class ClimbStairs {
+class ClimbStairs {
 
     public int climbStairs(int n) {
         if (n==1) {

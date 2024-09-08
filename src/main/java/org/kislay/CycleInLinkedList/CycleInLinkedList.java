@@ -1,6 +1,6 @@
 package org.kislay.CycleInLinkedList;
 
-public class CycleInLinkedList {
+class CycleInLinkedList {
 
 
 

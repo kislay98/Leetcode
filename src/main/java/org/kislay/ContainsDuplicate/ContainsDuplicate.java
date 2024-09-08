@@ -3,7 +3,7 @@ package org.kislay.ContainsDuplicate;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ContainsDuplicate {
+class ContainsDuplicate {
 
     public boolean containsDuplicate(int[] nums) {
         Map<Integer, Boolean> presenceMap = new HashMap<>();

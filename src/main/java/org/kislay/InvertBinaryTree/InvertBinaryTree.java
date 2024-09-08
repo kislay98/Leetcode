@@ -1,6 +1,6 @@
 package org.kislay.InvertBinaryTree;
 
-public class InvertBinaryTree {
+class InvertBinaryTree {
 
 
     public static class TreeNode {

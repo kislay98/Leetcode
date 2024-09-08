@@ -3,7 +3,7 @@ package org.kislay.RansomNote;
 import java.util.HashMap;
 import java.util.Map;
 
-public class RansomNote {
+class RansomNote {
 
     public boolean canConstruct(String ransomNote, String magazine) {
         Map<Character,Integer> magazineFreqMap = getFreqMap(magazine);

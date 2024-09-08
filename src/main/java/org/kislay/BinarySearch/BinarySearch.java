@@ -1,6 +1,6 @@
 package org.kislay.BinarySearch;
 
-public class BinarySearch {
+class BinarySearch {
 
     public int search(int[] nums, int target) {
         int index = -1;

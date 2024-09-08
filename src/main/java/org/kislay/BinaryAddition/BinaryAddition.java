@@ -1,6 +1,6 @@
 package org.kislay.BinaryAddition;
 
-public class BinaryAddition {
+class BinaryAddition {
     public String addBinary(String a, String b) {
         StringBuilder stringBuilder = new StringBuilder();
         int aEndPosition = a.length() - 1;

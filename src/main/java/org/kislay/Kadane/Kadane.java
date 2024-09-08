@@ -1,6 +1,6 @@
 package org.kislay.Kadane;
 
-public class Kadane {
+class Kadane {
 
     public int maxSubArray(int[] nums) {
         if (nums == null || nums.length == 0) {

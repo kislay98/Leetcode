@@ -1,6 +1,6 @@
 package org.kislay.ReverseLinkedList;
 
-public class ReverseLinkedList {
+class ReverseLinkedList {
 
     public static class ListNode {
       int val;

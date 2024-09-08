@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
 
-public class ThreeSumHimanshu {
+class ThreeSumHimanshu {
 
         public List<List<Integer>> threeSum(int[] nums) {
             List<List<Integer>> result = new ArrayList<>();

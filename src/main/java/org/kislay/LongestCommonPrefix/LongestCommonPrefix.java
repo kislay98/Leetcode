@@ -1,6 +1,6 @@
 package org.kislay.LongestCommonPrefix;
 
-public class LongestCommonPrefix {
+class LongestCommonPrefix {
 
     public String longestCommonPrefix(String[] strs) {
         if (strs == null || strs.length == 0) {

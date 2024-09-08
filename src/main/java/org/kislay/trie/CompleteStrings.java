@@ -1,9 +1,9 @@
-package org.kislay.CompleteStrings;
+package org.kislay.trie;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class CompleteStrings {
+class CompleteStrings {
     static class TrieNode {
         Map<Character, TrieNode> children = new HashMap<Character, TrieNode>();
     }

@@ -1,6 +1,6 @@
 package org.kislay.FillForm;
 
-public class FillForm {
+class FillForm {
 
     public int[][] floodFill(int[][] image, int sr, int sc, int color) {
         int rowLength = image.length;

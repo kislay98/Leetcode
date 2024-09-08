@@ -1,6 +1,6 @@
 package org.kislay.BadVersion;
 
-public class BadVersion {
+class BadVersion {
 
     boolean isBadVersion(int version) {
         return version >= 5;
