@@ -1,0 +1,12 @@
+Given a binary tree, determine if it is  Height balanced
+
+
+1. Do recursion on root (HEIGHT)
+    a. if node is null -> return 0
+    b. leftHeight   = HEIGHT(node->left)
+    c. rightHeight  = HEIGHT(node->right)
+    d if rightHeight == -1 OR leftHeight == -1
+        return -1
+    d. if |rightHeight - leftHeight| >= 2
+        return -1
+    e. return 1 + MAX(leftHeight, rightHeight)

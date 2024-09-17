@@ -1,0 +1,11 @@
+An image is represented by an m x n integer grid image.You are also given three integers sr, sc, and color.
+You should perform a flood fill on the image starting from the pixel image[sr][sc].
+
+1. create a visited matrix
+2. use DFS or BFS with start as sr,sc
+    if (r,c) are not in range OR grid != originalColor
+        return
+    visited[i][j] = true
+    DFS(up, down, left, right)
+    grid[i][j] = newColor
+3.  return image

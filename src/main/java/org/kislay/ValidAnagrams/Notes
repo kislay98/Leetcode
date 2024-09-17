@@ -1,0 +1,9 @@
+Given two strings s and t
+return true if t is an  anagram of s, and false otherwise.
+
+1. Put each char of s in a freq map
+2. iterate through t,
+    if char is not present in freq map OR freq is 0
+        return false
+    reduce freq of char by 1
+3. return true is freq map is empty, false otherwise
