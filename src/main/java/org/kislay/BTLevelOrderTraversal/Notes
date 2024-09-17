@@ -1,0 +1,16 @@
+Given the root of a binary tree,
+Return the level order traversal of its nodes' values.
+
+1. Create a queue of nodes
+2. Create a class with 2 members, node and level
+3. Add the root in the Queue with level = 0
+4. Create a Map<Level, list of nodes>
+5. Apply BFS:
+    while (queue is not empty)
+        pop the node,level object
+        if map has level:
+            append node to the map.get(level) list
+        else
+            map.put(level, node)
+        Offer all current children of node to queue.
+6. Create a List<List<Integer>> from the map and return

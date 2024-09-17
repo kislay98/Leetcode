@@ -16,7 +16,7 @@ class O1Matrix {
             for (int j = 0; j < n; j++) {
                 if (mat[i][j] == 0) {
                     visited[i][j] = true;
-                    HashMap<Integer, Integer> map = new HashMap<>();
+                    Map<Integer, Integer> map = new HashMap<>();
                     map.put(i, j);
                     queue.add(map);
                 }

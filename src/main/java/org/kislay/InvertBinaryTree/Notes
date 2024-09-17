@@ -1,0 +1,9 @@
+Given the root of a binary tree, invert the tree
+Return its root.
+
+1. Use recursion(INVERT)
+    a. If the node is null -> return
+    b. invert the children using the same method
+        INVERT(node->left)
+        INVERT(node->right)
+    c. swap node->right & node->left

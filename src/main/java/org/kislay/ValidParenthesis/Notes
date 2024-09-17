@@ -1,0 +1,22 @@
+Given a string s containing just the characters '(', ')', '{', '}', '[' and ']'
+Determine if the input string is valid in parenthesis.
+
+1. Create a Map of '(' -> ')'
+                   '{' -> '}'
+                   '[' -> ']'
+2. Create a Stack of Characters.
+3. Loop through the string
+        if character is in (,[,{
+            put in stack
+        else
+            if stack is empty
+                return false
+            pop a character from stack
+            if (map.get(character) != character)
+                return false
+4. return true.
+
+JAVA SYNTAX TO REMEMBER:
+    1. Stack<ELEMENT> charStack = new Stack<>();
+        add     -> charStack.addElement(element)
+        remove  -> charStack.pop()

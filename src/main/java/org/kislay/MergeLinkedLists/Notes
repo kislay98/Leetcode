@@ -1,0 +1,11 @@
+You are given the heads of two sorted linked lists list1 and list2.
+Merge the two lists into one sorted list. Return the head of the merged linked list
+
+
+1. Create a dummy node as currPointer
+2. while list1 and list2 are not null
+        currPointer->next = smaller of list1, list2
+        move the smaller list(list1/list2) to the next node
+        move currPointer to the next node
+3. Append the remaining list(list1/list2) to the curPointer
+4. Return dummy->next

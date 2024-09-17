@@ -11,37 +11,24 @@ class MergeLinkedLists {
   }
 
   public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-        if (list1 == null) return list2;
-        if (list2 == null) return list1;
-
-        ListNode head, currPointer = null;
-        head = list1.val < list2.val ? list1 : list2;
+        ListNode dummy = new ListNode();
+        ListNode currPointer = dummy;
         while (list1 != null && list2 != null) {
             if (list1.val < list2.val) {
-                if (currPointer == null) {
-                    currPointer = list1;
-                } else {
-                    currPointer.next = list1;
-                    currPointer = currPointer.next;
-                }
+                currPointer.next = list1;
                 list1 = list1.next;
             } else {
-                if (currPointer == null) {
-                    currPointer = list2;
-                } else {
-                    currPointer.next = list2;
-                    currPointer = currPointer.next;
-                }
+                currPointer.next = list2;
                 list2 = list2.next;
             }
+            currPointer = currPointer.next;
         }
-        if (list1 == null) {
+        if (list1 != null) {
+            currPointer.next = list1;
+        } else {
             currPointer.next = list2;
         }
-        else if (list2 == null) {
-            currPointer.next = list1;
-        }
-        return head;
+        return dummy.next;
   }
 
     public static void main(String[] args) {

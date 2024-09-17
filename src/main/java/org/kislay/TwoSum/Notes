@@ -1,0 +1,26 @@
+Given an array of integers nums and an integer target.
+Return indices of the two numbers such that they add up to target.
+
+Method 1 (using hashmap):
+Time: O(n)
+Space: O(n)
+
+1. Create a hashmap
+2. Put elements as <element, position> from the array
+3. Loop through the map
+        find (target - element) in map
+            if present return their position
+4. If out of the loop, return no position exists
+
+Method 2 (sorting):
+Time: O(nlog(n))
+Space: O(1)
+
+1. Sort the input array
+2. Use 2 pointers: start = 0, end = arrayLength - 1
+3. while (start < end)
+    if array[start] + array[end] is
+        a. greater than target ? end = end - 1
+        b. less than target ? start = start + 1
+        c. equal ? return element
+4. If out of the loop, return no position exists

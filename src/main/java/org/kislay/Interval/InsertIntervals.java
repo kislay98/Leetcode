@@ -1,9 +1,6 @@
-package org.kislay.InsertIntervals;
+package org.kislay.Interval;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
 
 class InsertIntervals {
 

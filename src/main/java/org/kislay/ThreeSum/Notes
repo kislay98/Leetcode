@@ -1,0 +1,12 @@
+Given an integer array nums,
+return all the triplets [nums[i], nums[j], nums[k]] such that:
+i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0
+
+1. Check (org/kislay/TwoSum/Notes), modify to return all elements
+2. For each elements in array between 0 and N - 2:
+        do TwoSum with
+            target  = -array[i]
+            start   = currIndex + 1
+            end     = N - 1
+        add the solutions in current Solution list
+3. Return current list

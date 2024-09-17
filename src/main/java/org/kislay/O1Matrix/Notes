@@ -1,0 +1,20 @@
+Given an m x n binary matrix mat, return the distance of the nearest 0 for each cell.
+
+
+1. Create a m x n distance matrix  and a m x n boolean visited matrix
+2. Put all zero's position in a queue, mark their distance as 0, and visited = true
+3. [EDGE CASE] No zeros: return  matrix with all distance = 0
+4. APPLY BFS,
+    while queue is not empty,
+        pop an element from the queue
+        for each of its 4 neighbour
+            if not visited:
+                put in queue
+                mark them as visited
+                update distance(neighbour) = distance(element) + 1
+
+
+
+JAVA SYNTAX TO REMEMBER:
+       1. Queue<DATATYPE> queue = new LinkedList<DATATYPE>();
+       2. No Pair in java.util, use int[] arr OR Map<Integer, Integer> map

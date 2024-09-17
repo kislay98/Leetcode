@@ -1,0 +1,15 @@
+Given a string s
+Return the length of the longest substring without repeating characters.
+
+
+1. Create a HashMap <Character, Integer>
+2. currMaxLength = 1
+3. use 2 pointers start = 0
+4. Iterate the string using end = 0 to length - 1
+        if map.containsKey(element) AND map.get(element) > 0
+            move start from (start to end)
+                for each element encountered: remove it from the map
+        else
+            map.put(element, 1)
+            maxLength = MAX(maxLength, end - start + 1)
+5. return maxLength

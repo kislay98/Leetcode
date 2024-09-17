@@ -1,0 +1,11 @@
+Given a binary search tree (BST)
+return the lowest common ancestor (LCA) node of two given nodes in the BST.
+
+2. use recursion (DFS)
+    if l < root and right > root
+        return root
+    else if both are less
+        DFS(root->left)
+    else if both are more
+        DFS(root->right)
+
